@@ -28,6 +28,5 @@ git,nodejs with npm,ethereumjs-testrpc,truffle with webpack,Meta-mask browser pl
 
 This means you haven't compiled or migrated your contracts yet. Run `truffle migrate --networkd dev` first.
 
-2, Error: Counter has not been deployed to detected network (network/artifact mismatch)
-    at counter.js:37030
+2, * **Error: Counter has not been deployed to detected network (network/artifact mismatch)    at counter.js:37030
     Make sure Metamask browser plugin is turned off as the App is deployed on testrpc.
