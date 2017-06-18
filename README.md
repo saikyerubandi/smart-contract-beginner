@@ -33,16 +33,16 @@ This means you haven't compiled or migrated your contracts yet. Run `truffle mig
 
 ## Building and the frontend with Metamask
 
-1. Stop testrpc 
+1, Stop testrpc 
 2, Log in or create a new account in MetaMask browser plugin. 
 3, Switch Metamask to Ethereum test network (Ropsten Testnet at this time)
-2. Paste the code in examples like contracts\Solidity.sol in a online solidity compiler like https://ethereum.github.io/browser-solidity/ 
-3, Compile 
-4, Press Create button to push contract in Ethereum Test
-5, Metamask should intercept this call to create and prompt to accept/reject/reset this transaction.
-6, Accept the transaction
-4, Wait for the create transaction to be mined in Ethereum Testnet
-5, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of address field 
+4, Paste the code in examples like contracts\Solidity.sol in a online solidity compiler like https://ethereum.github.io/browser-solidity/ 
+5, Compile 
+6, Press Create button to push contract in Ethereum Test
+7, Metamask should intercept this call to create and prompt to accept/reject/reset this transaction.
+8, Accept the transaction
+9, Wait for the create transaction to be mined in Ethereum Testnet
+10, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of address field 
   "networks": {
     "1": {
       "events": {},
@@ -50,5 +50,5 @@ This means you haven't compiled or migrated your contracts yet. Run `truffle mig
       "address": "0xa067b3f11f05ccfa5b7623432effe62e8cd9552b",
       "updated_at": 1497817047868
     }
-6, Stop and start webpack-dev-server --hot
-7, Now your contract frontend should be connected to Ethereum Testnet using Metamask.
+11, Stop and start webpack-dev-server --hot
+12, Now your contract frontend should be connected to Ethereum Testnet using Metamask.
