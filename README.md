@@ -47,9 +47,9 @@ This means you haven't compiled or migrated your contracts yet. Run `truffle mig
 
 7, Metamask should intercept this call to create and prompt to accept/reject/reset this transaction.
 
-8, Accept the transaction
+8, Accept the transaction in Metamask.
 
-9, Wait for the create transaction to be mined in Ethereum Testnet
+9, Wait for the create transaction to be mined in Ethereum Testnet. You can also check the transaction details at https://ropsten.etherscan.io/ using transaction number.
 
 10, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of address field 
   "networks": {
