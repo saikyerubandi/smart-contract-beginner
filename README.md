@@ -54,12 +54,12 @@ This means you haven't compiled or migrated your contracts yet. Run `truffle mig
 10, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of address field 
 
   "networks": {
-    "1": {
+  "1": {
       "events": {},
       "links": {},
       "address": "0xa067b3f11f05ccfa5b7623432effe62e8cd9552b",
       "updated_at": 1497817047868
-    }
+      }
 11, Stop and start webpack-dev-server --hot
 
 12, Now your contract frontend should be connected to Ethereum Testnet using Metamask.
