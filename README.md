@@ -52,6 +52,7 @@ This means you haven't compiled or migrated your contracts yet. Run `truffle mig
 9, Wait for the create transaction to be mined in Ethereum Testnet. You can also check the transaction details at https://ropsten.etherscan.io/ using transaction number.
 
 10, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of address field 
+
   "networks": {
     "1": {
       "events": {},
