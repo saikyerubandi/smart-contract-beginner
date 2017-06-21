@@ -1,5 +1,10 @@
+/*
+  A simple Contract that stores a number as state variable. Two transaction
+  functions and a default call function for the state variable.
+  */
 pragma solidity ^0.4.2;
 
+/** @title Counter */
 contract Counter {
   uint public value;
 
@@ -11,7 +16,7 @@ contract Counter {
   }
 
   function decrease() external {
-    --value;
+    if(value!=0) --value;
   }
 
 
