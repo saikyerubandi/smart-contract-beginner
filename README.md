@@ -1,29 +1,65 @@
-# truffle-init-webpack
-Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
+# smart-contract-beginner 
+Smart Contract examples project with Solidity,Web3js deployed on testrpc or  Metamask using Truffle framework.
 
-## Usage
+## PreReqs
+git,nodejs with npm,ethereumjs-testrpc,truffle with webpack,Meta-mask browser plugin
 
-To initialize a project with this exapmple, run `truffle init webpack` inside an empty directory.
+## Get the examples project
+ Clone this project using   
+  git clone https://github.com/saikyerubandi/smart-contract-beginner.git
+  
+## Building and the frontend with testrpc
 
-## Building and the frontend
-
-1. First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development").
-1. Then run `npm run dev` to build the app and serve it on http://localhost:8080
-
-## Possible upgrades
-
-* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application. Contributions welcome!
+1. Cd to smart-contract-beginner 
+2. sudo chmod +x startTestrpc.sh
+3. run 
+   ./startTestrpc
+4. In another command shell run
+    truffle migrate --network dev
+5. run 
+    webpack-dev-server --hot
+6. In the browser go to http://localhost:8080/counter.html 
+     
+    
 
 ## Common Errors
 
-* **Error: Can't resolve '../build/contracts/MetaCoin.json'**
+1, * **Error: Can't resolve '../build/contracts/Counter.json'**
 
-This means you haven't compiled or migrated your contracts yet. Run `truffle compile` and `truffle migrate` first.
+This means you haven't compiled or migrated your contracts yet. Run `truffle migrate --networkd dev` first.
 
-Full error:
+2, * **Error: Counter has not been deployed to detected network (network/artifact mismatch)    at counter.js:37030
+    Make sure Metamask browser plugin is turned off as the App is deployed on testrpc.
 
-```
-ERROR in ./app/main.js
-Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
- @ ./app/main.js 11:16-59
-```
+## Building and the frontend with Metamask
+
+1, Stop testrpc 
+
+2, Log in or create a new account in MetaMask browser plugin. 
+
+3, Switch Metamask to Ethereum test network (Ropsten Testnet at this time)
+
+4, Paste the code in examples like contracts\Solidity.sol in a online solidity compiler like https://ethereum.github.io/browser-solidity/ 
+
+5, Compile 
+
+6, Press Create button to push contract in Ethereum Test
+
+7, Metamask should intercept this call to create and prompt to accept/reject/reset this transaction.
+
+8, Accept the transaction in Metamask.
+
+9, Wait for the create transaction to be mined in Ethereum Testnet. You can also check the transaction details at https://ropsten.etherscan.io/ using transaction number.
+
+10, Once the transaction is mined copy the Contract address and replace in build/contracts/Counter.json as the value of "address" field 
+
+  "networks": {
+  "1": {
+      "events": {},
+      "links": {},
+      "address": "0xa067b3f11f05ccfa5b7623432effe62e8cd9552b",
+      "updated_at": 1497817047868
+      }
+11, Stop and start webpack-dev-server --hot
+
+12, Now your contract frontend should be connected to Ethereum Testnet using Metamask.
