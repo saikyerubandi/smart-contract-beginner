@@ -7,7 +7,7 @@ import "../contracts/Counter.sol";
 contract TestCounter {
 
   function testNewCounterValueIszero() {
-    Counter counter = new Counter();
+    Counter counter = Counter(DeployedAddresses.Counter());
 
     uint expected = 0;
 

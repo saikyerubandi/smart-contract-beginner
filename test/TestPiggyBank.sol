@@ -7,7 +7,7 @@ import "../contracts/PiggyBank.sol";
 contract TestPiggyBank {
 
   function testNewAccountHasZeroBalance() {
-    PiggyBank piggyBank = new PiggyBank();
+    PiggyBank piggyBank = PiggyBank(DeployedAddresses.PiggyBank());
 
     uint expected = 0;
 
