@@ -8,9 +8,10 @@ module.exports = {
       port: 8545,
       network_id: '*' // Match any network id
     },
-    test: {
-      network_id: 3 // Ropsten
+    private: {
+      host: 'locahost',
+      port: 40941,
+      network_id: '*' // Ropsten
     }
-
   }
 }
