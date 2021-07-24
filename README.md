@@ -11,9 +11,9 @@ git,nodejs with npm,ethereumjs-testrpc,truffle with webpack,Meta-mask browser pl
 ## Building and the frontend with testrpc
 
 1. Cd to smart-contract-beginner 
-2. sudo chmod +x startTestrpc.sh
+2. sudo chmod +x startTestRPC.sh
 3. run 
-   ./startTestrpc
+   ./startTestRPC.sh
 4. In another command shell run
     truffle migrate --network dev
 5. run 
